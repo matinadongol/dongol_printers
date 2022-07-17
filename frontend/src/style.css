@@ -1,0 +1,743 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Varela Round", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+/* navbar start */
+.navbarPadding {
+  padding: 0 10% !important;
+}
+.navbar-brand {
+  width: 18rem;
+  height: auto;
+}
+
+.navbar-brand img {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  gap: 1rem;
+  width: auto;
+}
+
+.scrolls {
+  /* backdrop-filter: blur(100px); */
+  background-color: rgb(244, 244, 244);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgb(66, 66, 66) !important;
+  margin-left: 1.5rem;
+  text-transform: uppercase;
+  position: relative;
+  font-size: 3rem !important;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.nav-link:hover,
+.nav-pills .nav-link.active {
+  background: #0b5394 !important;
+  color: #fff !important;
+}
+
+.nav-link::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 15px;
+  bottom: 7px;
+  border: 4px solid #0b5394;
+  border-width: 0 0 2px 2px;
+  transition: all 0.2s;
+  opacity: 0;
+}
+
+.nav-link::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  border: 4px solid #0b5394;
+  border-width: 2px 2px 0 0;
+  transition: all 0.2s;
+  opacity: 0;
+}
+
+.nav-link:hover::before {
+  left: -5px;
+  bottom: -5px;
+  opacity: 1;
+}
+
+.nav-link:hover::after {
+  top: -5px;
+  right: -5px;
+  opacity: 1;
+}
+
+.navbarcontact {
+  background-color: #000000;
+  color: #fff;
+}
+/* navbar end */
+
+/* home start */
+.home {
+  background-image: url("./images/home.webp");
+  background-size: 100% auto;
+  background-position: top;
+  /* background-attachment: fixed; */
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 18%;
+  position: relative;
+}
+
+.mobileHomeImg{
+  display: none;
+}
+
+.home_content {
+  text-align: right;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.home_content h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: rgb(81, 81, 81);
+  font-family: 'Quicksand', sans-serif;
+  width: 35%;
+}
+
+.home_content p {
+  font-size: 2.8rem;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #595959;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.QuoteBtn {
+  font-size: 2.5rem !important;
+  padding: .8% 1.5%;
+  border: none;
+  background-color: #0b5394 !important;
+  color: #fff !important;
+  border-radius: 5px;
+  width: fit-content;
+  text-decoration: none;
+  font-family: 'Hind Siliguri', sans-serif;
+  z-index: 99;
+  margin-top: 4%;
+}
+
+.QuoteBtn:hover {
+  background-color: #000000 !important;
+  color: #fff;
+}
+
+.homeImgSection {
+  display: none;
+}
+
+.svgHome {
+  position: absolute;
+  left: 0;
+  bottom: -200px;
+  width: 100%;
+  z-index: 1;
+}
+
+/* home end */
+
+/* about start */
+.about {
+  padding: 5% 0;
+  margin-top: 10%;
+}
+
+.about_side_content {
+  position: absolute;
+  left: 150px;
+  top: 160px;
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.about_side_content h1 {
+  font-size: 10rem !important;
+  height: auto;
+  opacity: 0.3;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.about_content {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 45rem !important;
+}
+
+.about_content_Img {
+  position: absolute;
+  top: -90px;
+  right: 320px;
+  width: 225px;
+  height: auto;
+}
+
+.aboutHeading {
+  font-size: 5rem;
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.about_content p {
+  font-size: 2.8rem;
+  margin-top: 2%;
+  margin-bottom: 0;
+  line-height: 4.5rem;
+  text-align: justify;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.about_content a {
+  font-size: 2.5rem;
+  padding: 0.5% 1%;
+  border: none;
+  margin-top: 1rem;
+  background-color: #0b5394;
+  color: #fff;
+  margin-left: auto;
+  width: fit-content;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.about_content a:hover {
+  background-color: #000;
+  border: none;
+  color: #fff;
+  transition: 0.8s;
+}
+
+.about_right {
+  /* background-image: url("../images/DongolPrintersLogoBlur.webp"); */
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.svgAbout{
+  display: none;
+}
+
+/* about end */
+
+/* services start */
+.services {
+  height: auto;
+  background-color: #e5e5e5;
+}
+
+.servicesHeading {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 3% !important;
+}
+
+.servicesMobile{
+  display: none;
+}
+
+.servicesHeading h1 {
+  font-size: 10rem;
+  color: #4c4c4c;
+  opacity: 0.3;
+  letter-spacing: 5px;
+  margin-bottom: 5rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.servicesHeading h2 {
+  font-size: 5rem;
+  font-weight: 600;
+  color: #4c4c4c;
+  font-family: 'Nunito', sans-serif;
+}
+
+.servicesHeading p {
+  font-size: 2rem;
+  margin-top: 5%;
+  color: rgb(89, 89, 89);
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.servicesList {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.servicesListButtonGroup{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.servicesListButton {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: rgb(63, 63, 63);
+  border: none;
+  background-color: transparent;
+  text-align: left;
+  width: fit-content;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 2px;
+}
+
+.servicesListButton:hover {
+  color: rgb(95, 95, 95);
+  transition: 0.1s;
+  border-left: 5px solid #0b5394;
+}
+
+.serviceRight {
+  background-color: #cad4dc;
+  min-height: 80rem;
+  overflow: hidden;
+}
+
+.serviceDetail {
+  padding: 10% 5%;
+  position: relative;
+}
+
+.serviceDetailIcon {
+  font-size: 15rem;
+  color: rgb(83, 83, 83);
+}
+
+.serviceDetail h1 {
+  font-size: 4rem;
+  color: rgb(57, 57, 57);
+  margin-top: 5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.serviceDetail h2 {
+  font-size: 2.5rem;
+  color: rgb(93, 93, 93);
+  margin: 1.5rem 0;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.serviceDetail p {
+  font-size: 2rem;
+  color: rgb(93, 93, 93);
+  margin: 3rem 0;
+  font-family: 'Hind Siliguri', sans-serif;
+  letter-spacing: 1px;
+}
+
+.ServiceQuote {
+  font-size: 2.5rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  color: rgb(93, 93, 93);
+  text-decoration: none;
+  margin-left: auto !important;
+  border: none;
+  position: absolute;
+  right: 50px;
+  background-color: transparent;
+}
+
+.ServiceQuote:hover {
+  border-bottom: 5px solid #0b5394;
+  color: rgb(55, 54, 54);
+}
+
+.servicesDetailForm {
+  padding: 2%;
+}
+.servicesFormHeading h1 {
+  font-size: 3rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0;
+  margin-top: 5%;
+}
+
+.servicesFormHeading p {
+  font-size: 1.4rem;
+  font-family: 'Nunito', sans-serif;
+  color: #737373;
+  width: 80%;
+  margin: 1% 0;
+}
+
+.servicesFormHeading span {
+  font-family: 'Quicksand', sans-serif;
+  color: #676767;
+  font-weight: 700;
+}
+
+.servicesForm {
+  margin-top: 5%;
+}
+
+.servicesForm label {
+  font-size: 1.6rem;
+  font-family: 'Quicksand', sans-serif;
+  height: fit-content !important;
+  padding-bottom: 0 !important;
+}
+
+.servicesForm input,
+.servicesForm select {
+  font-size: 1.8rem;
+  font-family: 'Hind Siliguri', sans-serif;
+  height: 6rem !important;
+  padding-bottom: 0 !important;
+}
+
+.servicesForm textarea {
+  font-size: 1.8rem;
+  font-family: 'Hind Siliguri', sans-serif;
+  height: 25rem !important;
+  padding-bottom: 0 !important;
+  padding-top: 7% !important;
+}
+
+.servicesDetailFormSubmit {
+  background-color: #0b5394;
+  color: #fff;
+  font-size: 2rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  float: right;
+  margin: 2% 0;
+  border: none;
+  padding: 1% 2%;
+  border-radius: 10px;
+}
+
+.servicesDetailFormSubmit:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.servicesDetailFormGoBack {
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  color: #676767;
+  padding: 1%;
+  margin-top: 2%;
+  float: left;
+}
+
+.servicesDetailFormGoBack:hover {
+  color: #504f4f;
+  border-bottom: 5px solid #0b5394;
+}
+/* services end */
+
+/* testimonials start */
+.testimonials {
+  background-color: #f1f1f1;
+  padding: 5% 0 1% 0;
+}
+
+.testimonials_heading {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonials_heading h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: rgb(38, 38, 38);
+  font-family: 'Quicksand', sans-serif;
+}
+
+.testimonials_heading p {
+  font-size: 2.8rem;
+  margin-top: 1%;
+  color: rgb(89, 89, 89);
+  font-family: 'Nunito', sans-serif;
+}
+
+.owl-carousel .owl-dots.disabled {
+  display: block !important;
+}
+
+.owl-item {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.testimonialsSection {
+  margin-top: 5rem;
+}
+
+.testimonialsItem {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 25rem;
+  width: 60rem;
+  padding: 2%;
+}
+
+.testimonialsItemBg {
+  background-color: #2f5e87;
+  height: 85%;
+  width: 60%;
+  position: absolute;
+  opacity: 0.2;
+}
+
+.testimonialsItem .leftQuote {
+  position: absolute;
+  left: 10px;
+  top: 35px;
+  font-size: 5rem;
+  z-index: 7;
+  color: #1e496f;
+}
+
+.testimonialsItem .rightQuote {
+  position: absolute;
+  right: 15px;
+  bottom: 103px;
+  font-size: 5rem;
+  z-index: 2;
+  color: #1e496f;
+}
+
+.testimonialsComment {
+  font-size: 2.2rem;
+  font-family: 'Hind Siliguri', sans-serif;
+  letter-spacing: 1px;
+  z-index: 2;
+  margin: 2rem 0 0.5rem 0;
+  font-weight: lighter !important;
+  background-color: #84a8c7;
+  padding: 5% 0.5%;
+}
+
+.testimoialsHr {
+  width: 50%;
+  border-top: 2px solid #000000;
+  z-index: 2;
+}
+
+.testimoialsAuthorDessignation {
+  font-size: 1.6rem;
+  font-family: 'Nunito', sans-serif;
+  z-index: 2;
+  margin: 0;
+}
+
+.testimoialsAuthor {
+  font-size: 2rem;
+  font-weight: lighter;
+  z-index: 2;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* testimonials end */
+
+/* contact  start */
+.contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contactDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactHeading h1{
+  font-size: 5rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 8% 0 2% 0;
+}
+
+.contactHeading p{
+  font-size: 2.8rem;
+  color: rgb(89, 89, 89);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  width: 60%;
+  margin: 0 auto 3% auto;
+}
+.contactLeft{
+  padding: 3% 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contactLeft h1{
+  font-size: 2.5rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.contactForm{
+  padding: 2% 20% 0 20%;
+}
+
+.contactForm .form-floating{
+  margin-bottom: 3%;
+}
+
+.contactForm label {
+  font-size: 1.6rem;
+  font-family: 'Quicksand', sans-serif;
+  height: fit-content !important;
+  padding-bottom: 0 !important;
+}
+
+.contactForm input,
+.contactForm select {
+  font-size: 1.8rem;
+  font-family: 'Hind Siliguri', sans-serif;
+  height: 6rem !important;
+  padding-bottom: 0 !important;
+}
+
+.contactForm textarea {
+  font-size: 1.8rem;
+  font-family: 'Hind Siliguri', sans-serif;
+  height: 25rem !important;
+  padding-bottom: 0 !important;
+  padding-top: 7% !important;
+}
+
+.contactDetails{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3% 0 !important;
+  gap: 3rem;
+  position: relative;
+}
+
+.contactDetails a{
+  text-decoration: none;
+  color: rgb(47, 47, 47);
+  letter-spacing: 2px;
+  font-size: 2rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.contactDetails a:hover{
+  color: rgb(47, 47, 47);
+  font-weight: 700;
+}
+
+.contactBlob{
+  position: absolute;
+  z-index: -1;
+  left: -155px;
+  width: 180%;
+}
+/* contact  end */
+
+/* footer start */
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b5394;
+  color: #fff;
+  padding: 1% 10%;
+}
+
+.footer p{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 0!important;
+}
+
+.socialIcon{
+  width: 20rem;
+}
+
+.socialIcon a{
+  text-decoration: none;
+  font-size: 2.2rem;
+  color: #fff;
+  margin-right: 10%;
+}
+
+.socialIcon a:hover{
+  color: #ff5292;
+}
+
+.footer p a{
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+}
+
+.footer p a:hover{
+  color: #ff5292;
+}
+/* footer end */
